@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+  let obj = {
+    a: 1,
+    b: 2
+  }
+
+  obj.__proto__.name = 'hahahah'
+
+  for (let key in obj) {
+    console.log(key);
+  }
+
+
+  for (let key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      console.log(key);
+
+    }
+  }
+
+  let o = { request: ƒ, getUri: ƒ, delete: ƒ, get: ƒ, head: ƒ, … }
+
+</script>
