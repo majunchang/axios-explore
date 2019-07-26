@@ -52,8 +52,7 @@ axios.request({
 
 ##### axios 内部流程图
 
-![img](https://user-gold-cdn.xitu.io/2018/5/28/163a57520cfeb580?imageslim)@
-
+![image.png](https://upload-images.jianshu.io/upload_images/5703029-e06d784e18f54a7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ### axios流程 解析
 
 ##### 入口文件
