@@ -276,7 +276,7 @@ Axios.prototype.request = function request(config) {
 
 ##### 拦截器的执行流程图
 
-![image.png](https://pic4.zhimg.com/80/v2-6075b1ceb55311820cac33da4334a92f_hd.jpg)
+![img](https://pic4.zhimg.com/80/v2-6075b1ceb55311820cac33da4334a92f_hd.jpg)
 
 ##### dispatchRequest
 
@@ -471,7 +471,7 @@ function getDefaultAdapter() {
 
 ##### http请求完成后到达用户的顺序流
 
-![image.png](https://upload-images.jianshu.io/upload_images/5703029-d547a47ddf42117a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240))
+![img](http://t1.market.xiaomi.com/download/Browser/0e0ca754e8e5744ec1d538ab9f350d2fd15a27574/1.png)
 
 
 
@@ -509,4 +509,4 @@ axios.defaults.transformResponse = [(data, headers) => {
 
 ##### axios 总体流程图
 
-![](<https://pic2.zhimg.com/v2-a35d475ecf0d4ad1029551214a70bca9_r.jpg>)
+![img](<https://pic2.zhimg.com/v2-a35d475ecf0d4ad1029551214a70bca9_r.jpg>)
