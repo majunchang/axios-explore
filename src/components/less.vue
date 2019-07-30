@@ -73,10 +73,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='less' scoped >
-@background-color: red;
-@text-color: yellowGreen;
-
+<style scoped>
+h1,
 h2 {
   font-weight: normal;
 }
@@ -89,14 +87,10 @@ li {
   margin: 0 10px;
 }
 a {
-  color: @text-color;
+  color: #42b983;
 }
 
 .text {
   color: red;
-}
-
-h1{
-  color: @text-color;
 }
 </style>
