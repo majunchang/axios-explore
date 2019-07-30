@@ -48,7 +48,7 @@ axios.request({
 
 ##### axios 内部流程图
 
-![img](https://user-gold-cdn.xitu.io/2018/5/28/163a57520cfeb580?imageslim)
+![img](http://user-gold-cdn.xitu.io/2018/5/28/163a57520cfeb580?imageslim/1.png)
 
 ### axios流程 解析
 
@@ -68,8 +68,8 @@ var defaults = require('./defaults');
  * 创建axios实例
  */
 function createInstance(defaultConfig) {
- 
-  var context = new Axios(defaultConfig);  // context为Axios实例  
+
+  var context = new Axios(defaultConfig);  // context为Axios实例
   // bind(fn,context)
   // context  ：   Axios {defaults: {…}, interceptors: {…}}
   // var instance = Axios.prototype.request.bind(context);
@@ -81,8 +81,8 @@ function createInstance(defaultConfig) {
   // Axios.prototype上的方法扩展到instance对象上 instance具有get post等方法  制定上下文为context
   // Axios.prototype: { request: ƒ, getUri: ƒ, delete: ƒ, get: ƒ, head: ƒ, … }
   utils.extend(instance, Axios.prototype, context);
-  
-  
+
+
   // Copy context to instance
   // instance 就有了defaults、interceptors 属性
   utils.extend(instance, context);
@@ -127,7 +127,7 @@ module.exports.default = axios;
 -  instance(option)  如何转化为request方法
 
 ```js
-var instance = bind(Axios.prototype.request, context); 
+var instance = bind(Axios.prototype.request, context);
 var instance = Axios.prototype.request.bind(context);
 instance({
         method: "get",
@@ -138,7 +138,7 @@ instance({
 
 bind:
 module.exports = function bind(fn, thisArg) {
-   //  fn:   指Axios中的Axios.prototype.request 
+   //  fn:   指Axios中的Axios.prototype.request
    //  thisArg 就是context  就是Axios {defaults: {…}, interceptors: {…}}
   return function wrap() {
    	// arguments [{url,method:'get'}，callee:()....]
@@ -155,7 +155,7 @@ module.exports = function bind(fn, thisArg) {
 -  instance(url，option)如何转化为request方法
 
 ```js
-var instance = bind(Axios.prototype.request, context); 
+var instance = bind(Axios.prototype.request, context);
 var instance = Axios.prototype.request.bind(context);
 
  instance.get(url, {
@@ -165,10 +165,10 @@ var instance = Axios.prototype.request.bind(context);
           console.log(res);
         });
     }
-    
+
 bind:
 module.exports = function bind(fn, thisArg) {
-   //  fn:   指Axios中的Axios.prototype.request 
+   //  fn:   指Axios中的Axios.prototype.request
    //  thisArg 就是context  就是Axios {defaults: {…}, interceptors: {…}}
   return function wrap() {
    	// arguments [url,{params:'花好动漫'}，callee:()....]
@@ -178,7 +178,7 @@ module.exports = function bind(fn, thisArg) {
     }
     return fn.apply(thisArg, args);
   };
-};  
+};
 
 utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
   /*eslint func-names:0*/
@@ -238,7 +238,7 @@ Axios.prototype.request = function request(config) {
                   });
               return this.handlers.length - 1;
          };
-         
+
       使用时：
            // Add a request interceptor
           axios.interceptors.request.use(function (config) {
@@ -276,7 +276,7 @@ Axios.prototype.request = function request(config) {
 
 ##### 拦截器的执行流程图
 
-![](<https://pic4.zhimg.com/80/v2-6075b1ceb55311820cac33da4334a92f_hd.jpg>)
+![image.png](https://pic4.zhimg.com/80/v2-6075b1ceb55311820cac33da4334a92f_hd.jpg)
 
 ##### dispatchRequest
 
@@ -379,7 +379,7 @@ source.cancel("取消请求的这条消息");
 
 
 ```javascript
-// 引入部分 
+// 引入部分
 
 var axios = createInstance(defaults);
 // Expose Cancel & CancelToken
@@ -447,10 +447,10 @@ CancelToken.source = function source() {
     token: token,
     cancel: cancel
   };
-};  
+};
 ```
 
-#### adapter是什么
+##### adapter是什么
 
 > adapter是一个典型的适配器模式的实现 ,内部对于不同环境做了适配处理，封装了统一的行为：根据config发送请求然后返回一个promise，promise的状态由请求的结果来决定
 
@@ -471,7 +471,7 @@ function getDefaultAdapter() {
 
 ##### http请求完成后到达用户的顺序流
 
-![image.png](https://upload-images.jianshu.io/upload_images/5703029-c01cbdca52e7cfd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/5703029-d547a47ddf42117a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240))
 
 
 
@@ -507,6 +507,6 @@ axios.defaults.transformResponse = [(data, headers) => {
 
 ```
 
-#### axios 总体流程图
+##### axios 总体流程图
 
 ![](<https://pic2.zhimg.com/v2-a35d475ecf0d4ad1029551214a70bca9_r.jpg>)
