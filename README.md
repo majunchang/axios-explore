@@ -279,7 +279,7 @@ Axios.prototype.request = function request(config) {
 
 ##### 拦截器的执行流程图
 
-![](<https://pic4.zhimg.com/80/v2-6075b1ceb55311820cac33da4334a92f_hd.jpg>)
+![image](http://t1.market.xiaomi.com/download/Browser/02398a4b851ec4d0e34cd8f9b098b848880a59e77/1.png)
 
 ##### dispatchRequest
 

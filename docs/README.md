@@ -1,3 +1,7 @@
+# axios-explore
+
+> A Vue.js project
+
 ### axios源码分析
 
 ##### axios调用方法
@@ -48,8 +52,7 @@ axios.request({
 
 ##### axios 内部流程图
 
-![img](http://user-gold-cdn.xitu.io/2018/5/28/163a57520cfeb580?imageslim/1.png)
-
+![image.png](https://upload-images.jianshu.io/upload_images/5703029-e06d784e18f54a7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ### axios流程 解析
 
 ##### 入口文件
@@ -276,7 +279,7 @@ Axios.prototype.request = function request(config) {
 
 ##### 拦截器的执行流程图
 
-![img](https://pic4.zhimg.com/80/v2-6075b1ceb55311820cac33da4334a92f_hd.jpg)
+![image](http://t1.market.xiaomi.com/download/Browser/02398a4b851ec4d0e34cd8f9b098b848880a59e77/1.png)
 
 ##### dispatchRequest
 
@@ -450,7 +453,7 @@ CancelToken.source = function source() {
 };
 ```
 
-##### adapter是什么
+#### adapter是什么
 
 > adapter是一个典型的适配器模式的实现 ,内部对于不同环境做了适配处理，封装了统一的行为：根据config发送请求然后返回一个promise，promise的状态由请求的结果来决定
 
@@ -471,7 +474,7 @@ function getDefaultAdapter() {
 
 ##### http请求完成后到达用户的顺序流
 
-![img](http://t1.market.xiaomi.com/download/Browser/0e0ca754e8e5744ec1d538ab9f350d2fd15a27574/1.png)
+![image.png](https://upload-images.jianshu.io/upload_images/5703029-c01cbdca52e7cfd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -507,6 +510,30 @@ axios.defaults.transformResponse = [(data, headers) => {
 
 ```
 
-##### axios 总体流程图
+#### axios 总体流程图
 
-![img](<https://pic2.zhimg.com/v2-a35d475ecf0d4ad1029551214a70bca9_r.jpg>)
+![](<https://pic2.zhimg.com/v2-a35d475ecf0d4ad1029551214a70bca9_r.jpg>)
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run all tests
+npm test
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
